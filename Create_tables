@@ -1,0 +1,56 @@
+Like Operator:
+mysql> select * from studInfo where empLastname like '%blue%';
++-------+-----------+-------------+
+| empID | empName   | empLastname |
++-------+-----------+-------------+
+|   101 | roshansns | blue        |
++-------+-----------+-------------+
+
+Listing the Records:
+mysql> select * from tblinvoice;
++-------+----------------+----------+
+| invID | invName        | invItems |
++-------+----------------+----------+
+|     1 | Roshan Munavar |      456 |
+|     2 | Shayaan Roshan |      789 |
+|     3 | Zuhain Roshan  |     1000 |
+|     4 | Shazli Roshan  |   678000 |
++-------+----------------+----------+
+
+mysql> select avg(invItems), sum(invItems), count(*) from tblinvoice where invName like 'Roshan%' ;
++---------------+---------------+----------+
+| avg(invItems) | sum(invItems) | count(*) |
++---------------+---------------+----------+
+|      456.0000 |           456 |        1 |
++---------------+---------------+----------+
+1 row in set (0.00 sec)
+
+mysql> select avg(invItems), sum(invItems), count(*) from tblinvoice where invName like '%Roshan' ;
++---------------+---------------+----------+
+| avg(invItems) | sum(invItems) | count(*) |
++---------------+---------------+----------+
+|   226596.3333 |        679789 |        3 |
++---------------+---------------+----------+
+1 row in set (0.00 sec)
+
+
+Average aAnd Sum Fuction:
+mysql> select * from tblinvoice;
++-------+----------------+----------+
+| invID | invName        | invItems |
++-------+----------------+----------+
+|     1 | Roshan Munavar |      456 |
+|     2 | Shayaan Roshan |      789 |
+|     3 | Zuhain Roshan  |     1000 |
+|     4 | Shazli Roshan  |   678000 |
++-------+----------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select avg(invItems), sum(invItems), count(*) from tblinvoice;
++---------------+---------------+----------+
+| avg(invItems) | sum(invItems) | count(*) |
++---------------+---------------+----------+
+|   170061.2500 |        680245 |        4 |
++---------------+---------------+----------+
+
+
