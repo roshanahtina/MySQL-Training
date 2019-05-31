@@ -53,4 +53,31 @@ mysql> select avg(invItems), sum(invItems), count(*) from tblinvoice;
 |   170061.2500 |        680245 |        4 |
 +---------------+---------------+----------+
 
+Create View:
+mysql> create view myView as select count(*), avg(invItems), sum(invItems) from tblinvoice where invItems > 1000;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show tables;
++---------------------+
+| Tables_in_custInfo  |
++---------------------+
+| myView              |
+| studInfo            |
+| tblcustInfo         |
+| tblcustInfoID       |
+| tblcustInfoIDBackup |
+| tblcusttest         |
+| tblinvoice          |
++---------------------+
+
+mysql> select * from myView;
++----------+---------------+---------------+
+| count(*) | avg(invItems) | sum(invItems) |
++----------+---------------+---------------+
+|        4 | 28106417.0000 |     112425668 |
++----------+---------------+---------------+
+
+mysql> drop view myView;
+Query OK, 0 rows affected (0.00 sec)
+
 
