@@ -260,5 +260,32 @@ mysql> select lcase(custInfoFirstName),lcase(custInfoLastName) from tblcustInfoI
 Now() :
 -----
 
+mysql> select *, now() as custDate from tblcustInfoID;
++-------------------+------------------+------------+---------------+---------------+--------------+-------------+---------------------+
+| custInfoFirstName | custInfoLastName | custInfoID | custInfoAddr1 | custInfoAddr2 | custInfoCity | custInfoPin | custDate            |
++-------------------+------------------+------------+---------------+---------------+--------------+-------------+---------------------+
+| Roshan            | Munavar          |          1 | Will St       |               | Bangalore    | 567890      | 2019-06-01 01:05:25 |
+| Kashifa           | Shaz             |          2 | Bill St       |               | Mangalore    | 561234      | 2019-06-01 01:05:25 |
+| Zuhain            | Zu               |          3 | Samy St       |               | Cudlore      | 234567      | 2019-06-01 01:05:25 |
+| Shayaan           | Shay             |          4 | Pillai St     |               | Vellore      | 1234567     | 2019-06-01 01:05:25 |
+| Munavar           | Rosha            |          5 | Khan St       |               | Dharmapuri   | 636808      | 2019-06-01 01:05:25 |
+| khurshid          | Shazli           |          6 | Kamal St      |               | Salem        | 636878      | 2019-06-01 01:05:25 |
++-------------------+------------------+------------+---------------+---------------+--------------+-------------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> select custInfoID,custInfoFirstName,custInfoAddr1,custInfoCity,custInfoPin, now() as custDate from tblcustInfoID;
++------------+-------------------+---------------+--------------+-------------+---------------------+
+| custInfoID | custInfoFirstName | custInfoAddr1 | custInfoCity | custInfoPin | custDate            |
++------------+-------------------+---------------+--------------+-------------+---------------------+
+|          1 | Roshan            | Will St       | Bangalore    | 567890      | 2019-06-01 01:05:35 |
+|          2 | Kashifa           | Bill St       | Mangalore    | 561234      | 2019-06-01 01:05:35 |
+|          3 | Zuhain            | Samy St       | Cudlore      | 234567      | 2019-06-01 01:05:35 |
+|          4 | Shayaan           | Pillai St     | Vellore      | 1234567     | 2019-06-01 01:05:35 |
+|          5 | Munavar           | Khan St       | Dharmapuri   | 636808      | 2019-06-01 01:05:35 |
+|          6 | khurshid          | Kamal St      | Salem        | 636878      | 2019-06-01 01:05:35 |
++------------+-------------------+---------------+--------------+-------------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql>
 
 
