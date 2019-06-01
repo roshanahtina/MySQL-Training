@@ -203,3 +203,62 @@ mysql> select empID,empName,empLastname from studInfo where empID=(select min(em
 
 mysql>
 
+Upper and Lower Case Conversions :
+---------------------------------
+
+mysql> select * from tblcustInfoID;                                                                                                                                 +-------------------+------------------+------------+---------------+---------------+--------------+-------------+
+| custInfoFirstName | custInfoLastName | custInfoID | custInfoAddr1 | custInfoAddr2 | custInfoCity | custInfoPin |
++-------------------+------------------+------------+---------------+---------------+--------------+-------------+
+| Roshan            | Munavar          |          1 | Will St       |               | Bangalore    | 567890      |
+| Kashifa           | Shaz             |          2 | Bill St       |               | Mangalore    | 561234      |
+| Zuhain            | Zu               |          3 | Samy St       |               | Cudlore      | 234567      |
+| Shayaan           | Shay             |          4 | Pillai St     |               | Vellore      | 1234567     |
+| Munavar           | Rosha            |          5 | Khan St       |               | Dharmapuri   | 636808      |
+| khurshid          | Shazli           |          6 | Kamal St      |               | Salem        | 636878      |
++-------------------+------------------+------------+---------------+---------------+--------------+-------------+
+6 rows in set (0.01 sec)
+
+mysql> select ucase(custInfoFirstName),ucase(custInfoLastName) from tblcustInfoID;
++--------------------------+-------------------------+
+| ucase(custInfoFirstName) | ucase(custInfoLastName) |
++--------------------------+-------------------------+
+| ROSHAN                   | MUNAVAR                 |
+| KASHIFA                  | SHAZ                    |
+| ZUHAIN                   | ZU                      |
+| SHAYAAN                  | SHAY                    |
+| MUNAVAR                  | ROSHA                   |
+| KHURSHID                 | SHAZLI                  |
++--------------------------+-------------------------+
+6 rows in set (0.00 sec)
+
+mysql> select ucase(custInfoFirstName),lcase(custInfoLastName) from tblcustInfoID;
++--------------------------+-------------------------+
+| ucase(custInfoFirstName) | lcase(custInfoLastName) |
++--------------------------+-------------------------+
+| ROSHAN                   | munavar                 |
+| KASHIFA                  | shaz                    |
+| ZUHAIN                   | zu                      |
+| SHAYAAN                  | shay                    |
+| MUNAVAR                  | rosha                   |
+| KHURSHID                 | shazli                  |
++--------------------------+-------------------------+
+6 rows in set (0.00 sec)
+
+mysql> select lcase(custInfoFirstName),lcase(custInfoLastName) from tblcustInfoID;
++--------------------------+-------------------------+
+| lcase(custInfoFirstName) | lcase(custInfoLastName) |
++--------------------------+-------------------------+
+| roshan                   | munavar                 |
+| kashifa                  | shaz                    |
+| zuhain                   | zu                      |
+| shayaan                  | shay                    |
+| munavar                  | rosha                   |
+| khurshid                 | shazli                  |
++--------------------------+-------------------------+
+6 rows in set (0.00 sec)
+
+Now() :
+-----
+
+
+
