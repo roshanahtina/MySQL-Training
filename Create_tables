@@ -1,4 +1,5 @@
 Like Operator:
+--------------
 mysql> select * from studInfo where empLastname like '%blue%';
 +-------+-----------+-------------+
 | empID | empName   | empLastname |
@@ -7,6 +8,7 @@ mysql> select * from studInfo where empLastname like '%blue%';
 +-------+-----------+-------------+
 
 Listing the Records:
+--------------------
 mysql> select * from tblinvoice;
 +-------+----------------+----------+
 | invID | invName        | invItems |
@@ -35,6 +37,7 @@ mysql> select avg(invItems), sum(invItems), count(*) from tblinvoice where invNa
 
 
 Average aAnd Sum Fuction:
+-------------------------
 mysql> select * from tblinvoice;
 +-------+----------------+----------+
 | invID | invName        | invItems |
@@ -54,6 +57,7 @@ mysql> select avg(invItems), sum(invItems), count(*) from tblinvoice;
 +---------------+---------------+----------+
 
 Create View:
+-------------------------
 mysql> create view myView as select count(*), avg(invItems), sum(invItems) from tblinvoice where invItems > 1000;
 Query OK, 0 rows affected (0.01 sec)
 
@@ -80,4 +84,122 @@ mysql> select * from myView;
 mysql> drop view myView;
 Query OK, 0 rows affected (0.00 sec)
 
+Sorting Records :
+-----------------
+mysql> select * from studInfo;
++-------+-------------+----------------+
+| empID | empName     | empLastname    |
++-------+-------------+----------------+
+|     1 | roshan      | munavar        |
+|     2 | roshannnnnn | munavarrrrrrrr |
+|   100 | rosh        | smiyth         |
+|   101 | roshansns   | blue           |
+|   102 | zuhain      | zu             |
+|   103 | Shayaan     | Sha            |
+|   104 | Shazli      | Shaz           |
++-------+-------------+----------------+
+
+mysql> select * from studInfo order by empName asc limit 2;
++-------+---------+-------------+
+| empID | empName | empLastname |
++-------+---------+-------------+
+|   100 | rosh    | smiyth      |
+|     1 | roshan  | munavar     |
++-------+---------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from studInfo order by empName asc;
++-------+-------------+----------------+
+| empID | empName     | empLastname    |
++-------+-------------+----------------+
+|   100 | rosh        | smiyth         |
+|     1 | roshan      | munavar        |
+|     2 | roshannnnnn | munavarrrrrrrr |
+|   101 | roshansns   | blue           |
+|   103 | Shayaan     | Sha            |
+|   104 | Shazli      | Shaz           |
+|   102 | zuhain      | zu             |
++-------+-------------+----------------+
+7 rows in set (0.00 sec)
+
+mysql> select * from studInfo order by empName desc;
++-------+-------------+----------------+
+| empID | empName     | empLastname    |
++-------+-------------+----------------+
+|   102 | zuhain      | zu             |
+|   104 | Shazli      | Shaz           |
+|   103 | Shayaan     | Sha            |
+|   101 | roshansns   | blue           |
+|     2 | roshannnnnn | munavarrrrrrrr |
+|     1 | roshan      | munavar        |
+|   100 | rosh        | smiyth         |
++-------+-------------+----------------+
+7 rows in set (0.00 sec)
+
+Minimum and Maximum Values :
+----------------------------
+
+mysql> select * from studInfo;
++-------+-------------+----------------+
+| empID | empName     | empLastname    |
++-------+-------------+----------------+
+|     1 | roshan      | munavar        |
+|     2 | roshannnnnn | munavarrrrrrrr |
+|   100 | rosh        | smiyth         |
+|   101 | roshansns   | blue           |
+|   102 | zuhain      | zu             |
+|   103 | Shayaan     | Sha            |
+|   104 | Shazli      | Shaz           |
++-------+-------------+----------------+
+7 rows in set (0.00 sec)
+
+mysql> select max(empID) from studInfo;
++------------+
+| max(empID) |
++------------+
+|        104 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select min(empID) from studInfo;
++------------+
+| min(empID) |
++------------+
+|          1 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select min(empID),empName from studInfo;
++------------+---------+
+| min(empID) | empName |
++------------+---------+
+|          1 | roshan  |
++------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select max(empID),empName from studInfo;
++------------+---------+
+| max(empID) | empName |
++------------+---------+
+|        104 | roshan  |
++------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select empID,empName,empLastname from studInfo where empID=(select max(empID) from studInfo);
++-------+---------+-------------+
+| empID | empName | empLastname |
++-------+---------+-------------+
+|   104 | Shazli  | Shaz        |
++-------+---------+-------------+
+1 row in set (0.00 sec)
+
+mysql> select empID,empName,empLastname from studInfo where empID=(select min(empID) from studInfo);
++-------+---------+-------------+
+| empID | empName | empLastname |
++-------+---------+-------------+
+|     1 | roshan  | munavar     |
++-------+---------+-------------+
+1 row in set (0.00 sec)
+
+mysql>
 
