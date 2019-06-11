@@ -1,0 +1,4 @@
+MariaDB [city_data]> load data infile '/var/lib/mysql/cities.csv' into table city_info Fields terminated by ',' Enclosed by '"' Lines terminated by '\n' Ignore 1 ROWS;
+Query OK, 129 rows affected, 10 warnings (0.00 sec)
+Records: 129  Deleted: 0  Skipped: 0  Warnings: 10
+
