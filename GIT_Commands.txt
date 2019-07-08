@@ -1,0 +1,278 @@
+   72  git
+   73  yum install git -y
+   74  sudo yum install git -y
+   75  git clone https://github.com/roshanahtina/MySQL-Training.git
+   82  git add .
+   83  git commit -m "Added a sql file"
+   84  git push -u origin master
+   86  git config --global user.email "roshan.ahtina@gmail.com"
+   87  git config --global user.name "roshanahtina"
+   88  git add .
+   89  git commit -m "Added a sql file"
+   90  git push -u origin master
+  133  git
+  138  git config -l
+  139  git fetch
+  140  git status
+  141  git clone https://github.com/roshanahtina/MySQL-Training.git
+  145  git pull -u origin master
+  148  git status
+  153  git log
+  154  git status
+  155  git config -l
+  156  git config -l | grep remote.origin.url
+  157  git config -l | grep {{ remote.origin.url }}
+  158  git log
+  159  git log --oneline
+  161  git log --oneline Create_tables
+  162  git log --oneline load_data_infile_cities.csv
+  163  git log --graph --decorade load_data_infile_cities.csv
+  164  git log --graph --decorate load_data_infile_cities.csv
+  165  git log --graph --decorate Create_tables
+  166  git log
+  167  git log --oneline
+  168  git log --graph --decorate
+  169  git branch
+  170  git branch mysql-db
+  171  git checkout mysql-db
+  172  git branch
+  173  git checkout master
+  174  git branch
+  176  git fetch
+  177  git log --oneline
+  178  git config -l
+  185  git config
+  186  git config -l
+  187  git config -l --get-color blue
+  188  git config -l --get-color 
+  189  git config -l
+  193  git init hi-there
+  198  cd .git/
+  203  git init --bare big-project
+  208  ll -a ../hi-there/.git/
+  210  git config -l
+  211  man git-config
+  214  git config -l
+  217  git config user.name roshanmunavar
+  218  git config -l
+  223  git add README.md 
+  224  git status
+  235  git status
+  236  git rm test.tct 
+  238  git rm -f test.tct 
+  240  git add test.tct 
+  241  git status
+  242  git rm test.tct 
+  243  git rm -f test.tct 
+  244  git status
+  246  git pull -u origin master
+  250  git status
+  252  git status
+  253  git status -s
+  254  git status -v
+  255  git add test.tct 
+  256  git status -v
+  258  git status 
+  259  git status -s
+  260  git status -v
+  263  git add test.tct 
+  264  git status -s
+  265  git rm -f test.tct 
+  266  git pull -u origin master
+  268  git commit
+  271  git add LICENCE.txt 
+  272  git status
+  273  git status -s
+  275  git status -s
+  276  git status
+  277  ll .git/objects/
+  278  git log --oneline
+  279  git commit
+  280  ll .git/
+  281  git .git/info/exclude 
+  282  vim .git/info/exclude 
+  285  touch .gitignore
+  286  git add .gitignore 
+  287  mv build .gitignore MySQL-Training/
+  291  git status
+  292  git rm -g LICENCE.txt 
+  293  git rm -f LICENCE.txt 
+  294  git pull -u
+  297  git add .gitignore 
+  298  git status 
+  299  git status -s
+  300  git commit -m "Adding a git ignore file"
+  301  git status -v
+  302  git status -s
+  303  git log --oneline
+  305  echo "build/*" > .gitignore 
+  306  cat .gitignore 
+  314  git status
+  315  git add .gitignore 
+  316  git commit -m "Ignored a build folder"
+  318  git status 
+  319  git status -v
+  320  git push origin master
+  324  git status 
+  325  git status -s
+  326  git status -v
+  344  git status
+  348  git status
+  352  git status 
+  353  git add date.txt 
+  354  git status -s
+  355  git commit -m "add date txt file"
+  356  git push -u origin master 
+  358  git status
+  359  git add MySqlDir/
+  360  git status -s
+  361  git status 
+  362  git push -u origin master 
+  364  [cloud_user@roshansyed26c MySQL-Training]$ git push -u origin master
+  365  Username for 'https://github.com': roshanahtina
+  366  Password for 'https://roshanahtina@github.com':
+  372  To https://github.com/roshanahtina/MySQL-Training.git
+  375  [cloud_user@roshansyed26c MySQL-Training]$ git push -u origin master
+  376  Username for 'https://github.com': roshanahitna
+  377  Password for 'https://roshanahitna@github.com':
+  380  git pull -u origin master
+  382  git pull -u origin master
+  387  git check-ignore
+  388  git check-ignore .gitignore 
+  392  git tags
+  393  git tag
+  394  git stage
+  395  git tag -a v0.1 -m "roshan's 1st tag"
+  396  git tag
+  397  git show v0.1
+  398  git tag v0.2 -m "roshan's 2st tag"
+  399  git tag
+  400  git tag -d v0.1
+  401  git tag
+  402  git branch
+  403  git checkout mysql-db
+  404  git pull -u origin master
+  406  git log --oneline --decorate
+  407  git status
+  408  git checkout master
+  409  git status
+  410  git branch
+  411  git checkout mysql-db
+  412  git log
+  413  git log --oneline --decorate
+  414  git tag
+  422  git status
+  423  git checkout master
+  432  git log --oneline
+  433  git revert HEAD~2
+  434  git log --oneline
+  437  git diff date.txt date.txt
+  438  git diff
+  439  git diff HEAD^ HEAD
+  440  git log --oneline
+  441  git diff d7f37b0 aa85abd
+  442  git diff --summary d7f37b0 aa85abd
+  443  git diff --summary d7f37b0 d7f37b0
+  444  git diff --summary d7f37b0 2350e7b
+  445  git diff  d7f37b0 2350e7b
+  448  git pull -u origin master
+  449  git branch
+  450  git tag
+  451  git tag -a v0.3
+  452  git tag
+  453  git show v0.3
+  454  ll .git
+  455  ll .git/objects/23/
+  458  git
+  459  git show v0.3
+  460  git gc --prune
+  461  git config -l
+  462  git gc --auto
+  463  git config --pruneexpire "30 days"
+  464  git config gcpruneexpire "30 days"
+  465  git config gc.pruneexpire "30 days"
+  466  git config -l
+  467  git config gc.pruneexpire "15 days"
+  468  git config -l
+  470  git log --oneline --decoate
+  471  git log --oneline --decorate
+  472  git diff 5f89883 9fe4a33
+  474  git log
+  475  git log --graph
+  476  git log --graph --decorate
+  477  git log --since="last 4 days"
+  478  git log -S build
+  479  git log --stat
+  481  man git-log
+  483  git log --user --email
+  484  git log --include user,email
+  485  git log -v user -v email
+  486  git log --use-mailmap
+  487  git log --use-mailmap --graph
+  488  git log  --graph
+  489  git log --limit 1
+  490  git log --limit=1
+  491  git log -10
+  492  git log --limit 
+  493  git review
+  494  git log -2
+  495  git history
+  496  git log single
+  497  git log --single
+  498  git log --oneline
+  499  git log --pretty=oneline --abbrev-commit
+  501  git clone MySQL-Training ~/MySQL-Training-Test
+  505  git clone MySQL-Training MySQL-Training-Test
+  508  git status
+  509  git status-s
+  510  git status -s
+  511  git status -v
+  512  git status -s
+  513  git status -v
+  517  git fetch
+  518  git pull
+  519  git fetch origin
+  520  git fetch origin master
+  522  git remote
+  523  git remote -v
+  524  git remote 
+  525  git track -u
+  526  git remote show
+  527  git remote show v
+  528  git remote show -v
+  529  git remote show -n
+  530  git remote -v
+  531  history | grep git
+  540  git mergetool
+  542  git gc --prune
+  543  git gc auto
+  544  git gc --auto
+  545  git gc --prune="last 5 days"
+  546  git config -l
+  547  ll .git
+  548  ll .git/index 
+  549  cat .git/index 
+  551  git log --graph
+  552  git log --graph --decorate
+  558  git status -v
+  559  git status -s
+  560  git pull -u
+  561  git status 
+  562  git add .
+  563  git status -s
+  564  git commit -m "Adding some files"
+  565  git status -s
+  566  git status -v
+  567  git log --graph
+  568  git log --oneline --decorate
+  569  git gc --prune
+  570  tee history | grep git
+  571  history | grep git
+  592  history | grep git
+  593  history tail -f 100 | grep git
+  594  history tail - 100 | grep git
+  595  history tail -100 | grep git
+  596  history tail | grep git
+  597  history  | grep git
+  602  history  | grep git
+  603  history  | grep git > GI_Commands.txt
