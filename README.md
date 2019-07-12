@@ -1,2 +1,0 @@
-# MySQL-Training
-MySQL-Training
