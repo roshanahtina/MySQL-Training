@@ -4,6 +4,6 @@
 for HOST in $(cat labservers.txt)
    do
      echo "####################### Logining in LAB Servers $HOST #######################"
-	 ssh #HOST 'uname -a'
+	 ssh #HOST `uname -a`
    done
 exit()
