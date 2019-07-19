@@ -7,4 +7,3 @@ for HOST in $(cat labservers.txt)
      echo "####################### Logining in LAB Servers $HOST #######################"
 	 ssh $HOST `uname -a`
    done
-exit()
