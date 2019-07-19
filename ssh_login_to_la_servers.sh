@@ -5,5 +5,5 @@ login_user=ansible
 for HOST in $(cat labservers.txt)
    do
      echo "####################### Logining in LAB Servers $HOST #######################"
-	 sudo -t ssh $login_user@$HOST 'uname -a'
+	 sudo -S ssh $login_user@$HOST 'uname -a'
    done
