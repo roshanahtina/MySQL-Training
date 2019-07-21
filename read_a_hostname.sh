@@ -2,7 +2,7 @@
 login_user=ansible
 labservers=labservers.txt
 
-while read -u10 labserver
+while read labserver
 
 do 
 echo -e "######### PING Command executes ##########"
