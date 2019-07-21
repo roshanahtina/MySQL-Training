@@ -5,5 +5,5 @@ labservers=labservers.txt
 while read labserver
 
 do 
-ssh $login_user@$labserver 'unmae -r'
+ssh $login_user@$labserver 'uname -r'
 done < $labservers
