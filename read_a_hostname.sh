@@ -6,7 +6,7 @@ while read labserver
 
 do 
 echo -e "######### PING Command executes ##########"
-ping -c 5 $labserver
+ping -c 2 $labserver
 
 echo -e "######### SSH Command executes ##########"
 ssh $login_user@$labserver 'uname -r'
