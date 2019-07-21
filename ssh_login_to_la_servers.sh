@@ -5,6 +5,6 @@ labservers=labservers.txt
 
 for HOST in $(cat $labservers)
    do
-     echo -e "\n\n####################### Logining in LAB Servers $HOST #######################\n"
+     echo -e "\n\n####################### Looking UNAME values for LAB Servers $HOST - `date` #######################\n"
 	 ssh $login_user@$HOST 'uname -a'
    done
