@@ -2,6 +2,10 @@
 
 [MySQL-Training](https://github.com/roshanahtina/MySQL-Training/)
 
+~~This line is stricked~~
+
+### THis is a new mysql trainig metrail
+
 
 First Header | Second Header
 ------------ | -------------------------
