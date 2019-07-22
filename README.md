@@ -1,5 +1,4 @@
 # MySQL-Training
 MySQL-Training
 
-http://github.com - automatic!
-[GitHub](http://github.com)
+[MySQL-Training](https://github.com/roshanahtina/MySQL-Training/)
