@@ -1,5 +1,5 @@
-roshansyed21c.mylabserver.com
-roshansyed22c.mylabserver.com
-roshansyed23c.mylabserver.com
-roshansyed25c.mylabserver.com
-roshansyed24c.mylabserver.com
+test1.mylabserver.com
+test2.mylabserver.com
+test3.mylabserver.com
+test4.mylabserver.com
+test5.mylabserver.com
